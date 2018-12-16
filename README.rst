@@ -87,7 +87,7 @@ If the date and time of the first ``datetime`` is later than the second, a ``Bac
 |
 |
 
-The second parameter can be omitted, in which case an ``TimeRange`` instance is created:
+The second parameter can be omitted, in which case an infinite ``TimeRange`` instance is created:
 
 ::
 
