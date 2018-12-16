@@ -20,7 +20,16 @@ Usage
 
    trange(datetime_1200, datetime_1300)  # Two datetime objects
 
-There are many more options to create a ``TimeRange`` instance:
+
+Once created, you can iterate through a ``TimeRange`` using a generator:
+
+.. code:: python
+
+   for dt in trange1.step(minutes=15):
+       print('This is printed every 15 minutes within trange1.')
+
+
+There are many other ways to create a ``TimeRange`` instance:
 
 .. code:: python
 
@@ -31,26 +40,22 @@ There are many more options to create a ``TimeRange`` instance:
    trange5 = trange(datetime_1300, datetime_1200)      # A backward TimeRange
    trange6 = trange(end=datetime_1200)                 # A backward TimeRange until datetime_1200
 
-You can even use just two ``timedelta`` instances:
+
+You can even use two ``timedelta`` instances:
 
 .. code:: python
 
    # This range will start in 1 hour and end 1 hour later than start (so in 2 hours):
    trange6 = trange(timedelta(hours=1), timedelta(hours=1)
 
-Once created, you can iterate through a ``TimeRange`` using a generator:
 
-.. code:: python
-
-   for dt in trange1.step(minutes=15):
-       print('This is printed every 15 minutes within trange1.')
-
-It works with backward ``TimeRange`` instances as well:
+Iterating through a backward ``TimeRange`` instance works as well:
 
 .. code:: python
 
    for dt in trange5.step(minutes=15):
        print("We're going back in time with steps of 15 minutes.")
+
 
 You can check if some ``datetime`` is withing the range:
 
