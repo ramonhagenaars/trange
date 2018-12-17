@@ -119,4 +119,4 @@ If only ``end`` is provided, a ``TimeRange`` is created that defines a range 'un
 
 .. |PyPI version| image:: https://badge.fury.io/py/trange.svg
    :target: https://badge.fury.io/py/trange
-.. |Build Status| image:: https://api.travis-ci.org/ramonhagenaars/jsons.svg?branch=master
+.. |Build Status| image:: https://travis-ci.com/ramonhagenaars/trange.svg?branch=master
