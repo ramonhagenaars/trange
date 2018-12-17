@@ -105,7 +105,7 @@ The second parameter can be omitted, in which case an infinite ``TimeRange`` ins
 |
 |
 
-If only ``end`` is provided, a ``TimeRange`` is created that defines a range 'until now'. This is a special case as a ``BackwardTimeRange`` is created that points infinitely back in history, starting at ``end``.
+If only ``end`` is provided, a ``TimeRange`` is created that defines a range 'until now'. This is a special case as a ``BackwardTimeRange`` is created that points infinitely back in history, starting at ``end``:
 
 ::
 
