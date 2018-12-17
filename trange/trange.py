@@ -99,8 +99,8 @@ class TimeRange(ABC):
         :param start: a datetime that marks the start of the range.
         :param end: an optional datetime that marks the end of the range.
         """
-        self.start = start
-        self.end = end
+        self._start = start
+        self._end = end
         self._hash = None
 
     def steps(self, *, delta=None, weeks=0, days=0, hours=0, minutes=0,
@@ -140,6 +140,22 @@ class TimeRange(ABC):
         while not self.end or self.contains(current_date, True, include_end):
             yield current_date
             current_date += delta_
+
+    @property
+    def start(self):
+        """
+        Return the start ``datetime`` of this ``TimeRange``.
+        :return: the start ``datetime``.
+        """
+        return self._start
+
+    @property
+    def end(self):
+        """
+        Return the end ``datetime`` of this ``TimeRange``.
+        :return: the end ``datetime``.
+        """
+        return self._end
 
     @property
     def delta(self):
