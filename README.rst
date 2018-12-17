@@ -117,6 +117,6 @@ If only ``end`` is provided, a ``TimeRange`` is created that defines a range 'un
     __.______.______.______.______.______.______.______.______.______.__
     12:00  12:15  12:30  12:45  13:30  14:00  14:15  14:30  14:45  15:00
 
-.. |PyPI version| image:: https://badge.fury.io/py/jsons.svg
-   :target: https://badge.fury.io/py/jsons
+.. |PyPI version| image:: https://badge.fury.io/py/trange.svg
+   :target: https://badge.fury.io/py/trange
 .. |Build Status| image:: https://api.travis-ci.org/ramonhagenaars/jsons.svg?branch=master
