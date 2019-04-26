@@ -156,3 +156,27 @@ class TestTRange(TestCase):
         trb = trange(d2, d1)
         trb_str = repr(trb)
         self.assertTrue(trb == eval(trb_str))
+
+    def test_in_with_infinite_start(self):
+        d1 = datetime(year=2019, month=1, day=1, hour=12, minute=0, second=0,
+                      microsecond=0)
+        d2 = datetime(year=2000, month=1, day=1, hour=12, minute=0, second=0,
+                      microsecond=0)
+        d3 = datetime(year=3000, month=1, day=1, hour=12, minute=0, second=0,
+                      microsecond=0)
+        datetime_range = trange(end=d1)
+        self.assertTrue(d1 in datetime_range)
+        self.assertTrue(d2 in datetime_range)
+        self.assertFalse(d3 in datetime_range)
+
+    def test_in_with_infinite_end(self):
+        d1 = datetime(year=2019, month=1, day=1, hour=12, minute=0, second=0,
+                      microsecond=1)
+        d2 = datetime(year=2019, month=1, day=1, hour=12, minute=0, second=0,
+                      microsecond=0)
+        d3 = datetime(year=3000, month=1, day=1, hour=12, minute=0, second=0,
+                      microsecond=0)
+        datetime_range = trange(start=d1)
+        self.assertTrue(d1 in datetime_range)
+        self.assertFalse(d2 in datetime_range)
+        self.assertTrue(d3 in datetime_range)
