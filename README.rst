@@ -117,6 +117,19 @@ If only ``end`` is provided, a ``TimeRange`` is created that defines a range 'un
     __.______.______.______.______.______.______.______.______.______.__
     12:00  12:15  12:30  12:45  13:30  14:00  14:15  14:30  14:45  15:00
 
+
+Recent updates
+==============
+
+0.1.1
++++++
+- Bugfix: contains (``in``) operator failed with infinite ``tranges``.
+
+0.1.0
++++++
+- Initial version
+
+
 .. |PyPI version| image:: https://badge.fury.io/py/trange.svg
    :target: https://badge.fury.io/py/trange
 .. |Build Status| image:: https://travis-ci.com/ramonhagenaars/trange.svg?branch=master
