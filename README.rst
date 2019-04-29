@@ -119,6 +119,17 @@ If only ``end`` is provided, a ``TimeRange`` is created that defines a range 'un
 
 
 
+Recent updates
+''''''''''''''
+
+0.1.1
++++++
+- Bugfix: contains (``in``) operator failed with infinite ``tranges``.
+
+0.1.0
++++++
+- Initial version
+
 
 .. |PyPI version| image:: https://badge.fury.io/py/trange.svg
    :target: https://badge.fury.io/py/trange
