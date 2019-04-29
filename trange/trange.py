@@ -258,8 +258,11 @@ class ForwardTimeRange(TimeRange):
         """
         after_start = ((include_start and item >= self.start)
                        or item > self.start)
-        before_end = ((include_end and item <= self.end)
-                      or item < self.end)
+        if self.end:
+            before_end = ((include_end and item <= self.end)
+                          or item < self.end)
+        else:
+            before_end = True # Infinite end
         return after_start and before_end
 
     def __str__(self):
@@ -334,9 +337,12 @@ class BackwardTimeRange(TimeRange):
         :return: See ``TimeRange.contains``.
         """
         before_start = ((include_start and item <= self.start)
-                        or item < self.start)
-        after_end = ((include_end and item >= self.end)
-                     or item > self.end)
+                       or item < self.start)
+        if self.end:
+            after_end = ((include_end and item >= self.end)
+                         or item > self.end)
+        else:
+            after_end = True # Infinite end
         return before_start and after_end
 
     def __str__(self):

@@ -35,12 +35,12 @@ There are many other ways to create a ``TimeRange`` instance:
 
 .. code:: python
 
-   trange1 = trange(datetime_1200, timedelta(hours=1)  # A datetime and a timedelta
-   trange2 = trange(datetime_1200)                     # A TimeRange that does not end
-   trange3 = trange()                                  # A TimeRange from now to eternity
-   trange4 = trange(timedelta(hours=1)                 # A TimeRange that starts in 1 hour to eternity
-   trange5 = trange(datetime_1300, datetime_1200)      # A backward TimeRange
-   trange6 = trange(end=datetime_1200)                 # A backward TimeRange until datetime_1200
+   trange1 = trange(datetime_1200, timedelta(hours=1))  # A datetime and a timedelta
+   trange2 = trange(datetime_1200)                      # A TimeRange that does not end
+   trange3 = trange()                                   # A TimeRange from now to eternity
+   trange4 = trange(timedelta(hours=1))                 # A TimeRange that starts in 1 hour to eternity
+   trange5 = trange(datetime_1300, datetime_1200)       # A backward TimeRange
+   trange6 = trange(end=datetime_1200)                  # A backward TimeRange until datetime_1200
 
 
 You can even use two ``timedelta`` instances:
